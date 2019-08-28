@@ -5,6 +5,10 @@
  */
 
 module.exports = {
+    siteMetadata: {
+        title: 'Learning Gatsby',
+        author: 'Ujjal Acharya'
+    },
   /* Your site config here */
   plugins: [`gatsby-plugin-sass`]
 }
