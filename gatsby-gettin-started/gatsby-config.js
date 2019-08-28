@@ -9,6 +9,15 @@ module.exports = {
         title: 'Learning Gatsby',
         author: 'Uzz Acharya'
     },
-  /* Your site config here */
-  plugins: [`gatsby-plugin-sass`]
+    /* Your site config here */
+    plugins: [`gatsby-plugin-sass`,
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `pages`,
+                path: `${__dirname}/src/`,
+            },
+        },
+        'gatsby-transformer-remark'
+        ]
 }
