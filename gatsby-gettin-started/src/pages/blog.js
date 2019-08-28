@@ -10,6 +10,7 @@ const Blog = () => {
                node{
                 frontmatter{
                  title
+                 date
                          }
                     }
                  }
@@ -24,7 +25,10 @@ const Blog = () => {
             <ol>
                 {data.allMarkdownRemark.edges.map(datum => {
                     return (
-                        <li>{datum.node.frontmatter.title}</li>
+                        <li>
+                            <h3> {datum.node.frontmatter.title}</h3>
+                            <p>{datum.node.frontmatter.date}</p>
+                        </li>
                     )
                 })}
             </ol>
