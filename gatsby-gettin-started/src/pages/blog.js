@@ -11,23 +11,26 @@ const Blog = () => {
                 frontmatter{
                  title
                  date
-                         }
+                        }
+                html
+                fields{
+                    slug
+                     }
                     }
                  }
             }
         }
     `)
 
-    // console.log(data.allMarkdownRemark.edges)
     return (
         <Layout>
             <h1>Blog</h1>
             <ol>
-                {data.allMarkdownRemark.edges.map(datum => {
+                {data.allMarkdownRemark.edges.map(edge => {
                     return (
                         <li>
-                            <h3> {datum.node.frontmatter.title}</h3>
-                            <p>{datum.node.frontmatter.date}</p>
+                            <h3> <Link to={`/blog/${edge.node.fields.slug}`}>{edge.node.frontmatter.title}</Link> </h3>
+                            <p>{edge.node.frontmatter.date}</p>
                         </li>
                     )
                 })}
