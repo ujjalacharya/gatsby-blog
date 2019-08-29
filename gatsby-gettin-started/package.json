@@ -15,6 +15,9 @@
   "dependencies": {
     "gatsby": "^2.13.73",
     "gatsby-plugin-sass": "^2.1.12",
+    "gatsby-plugin-sharp": "^2.2.18",
+    "gatsby-remark-images": "^3.1.19",
+    "gatsby-remark-relative-images": "^0.2.3",
     "gatsby-source-filesystem": "^2.1.18",
     "gatsby-transformer-remark": "^2.6.19",
     "node-sass": "^4.12.0",

@@ -4,7 +4,7 @@ import {graphql} from "gatsby";
 
 import Layout from "../components/Layout";
 
-export  const data = graphql`
+export const query = graphql`
         query($slug: String){
          markdownRemark(fields: {slug: {eq: $slug}}){
             frontmatter{
