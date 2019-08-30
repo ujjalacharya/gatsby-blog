@@ -6,8 +6,8 @@
 
 module.exports = {
     siteMetadata: {
-        title: 'Learning Gatsby',
-        author: 'Uzz Acharya'
+        title: 'Personal Blogs',
+        author: 'Ujjal Acharya'
     },
     /* Your site config here */
     plugins: [

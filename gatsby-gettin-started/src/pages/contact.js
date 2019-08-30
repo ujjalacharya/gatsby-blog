@@ -10,7 +10,6 @@ const Contact = () => {
             <Head title="Contact"/>
             <h1>Contact</h1>
             <p>You can contact him at +977 9848658331</p>
-            <p>Go to home: <Link to="/">Index</Link></p>
         </Layout>
     )
 }
