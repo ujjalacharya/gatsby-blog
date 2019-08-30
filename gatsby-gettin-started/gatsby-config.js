@@ -10,7 +10,15 @@ module.exports = {
         author: 'Uzz Acharya'
     },
     /* Your site config here */
-    plugins: [`gatsby-plugin-sass`,
+    plugins: [
+        {
+            resolve: `gatsby-source-contentful`,
+            options: {
+                spaceId: process.env.ID,
+                accessToken: process.env.TOKEN,
+            }
+        },
+        'gatsby-plugin-sass',
         {
             resolve: `gatsby-source-filesystem`,
             options: {
@@ -24,6 +32,7 @@ module.exports = {
             options: {
                 plugins: [
                     'gatsby-remark-relative-images',
+
                     {
                         resolve: 'gatsby-remark-images',
                         options: {
